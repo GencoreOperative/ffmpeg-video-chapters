@@ -1,5 +1,5 @@
 # Variables
-image_name=ffmpeg-video-chapters
+image_name=gencore/ffmpeg-video-chapters
 git= $(shell git rev-parse --short HEAD)
 image_version=latest
 
@@ -20,6 +20,6 @@ clean:
 publish:
 	@echo "Pushing to DockerHub"
 	@sh utils/docker-login
-	docker push $(image_name):$(image-version)
+	docker push $(image_name):$(image_version)
 	docker push $(image_name):$(git)
 	docker push $(image_name):latest
