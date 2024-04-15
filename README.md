@@ -18,6 +18,13 @@ Note:
 
 # Usage
 
+Using the provided script is the simplest way to invoke this functionality:
+```
+chapters.sh <video>
+```
+
+If you prefer to invoke the Docker image directly, then use the following command:
+
 ```
 docker run -v "$PWD:/data" --rm $(docker build -q .) <video>
 ```
